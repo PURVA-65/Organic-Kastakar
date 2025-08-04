@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Organic Products Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #000000;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    header img {
+      width: 100px;
+      height: auto;
+      margin-right: 1rem;
+      border-radius: 8px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .controls {
+      max-width: 1200px;
+      margin: 1rem auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+
+    .controls input, .controls select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 48%;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .product:hover {
+      transform: scale(1.02);
+    }
+    .product h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #4CAF50;
+    }
+    .btn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+    .btn a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .links-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .links-section h2 {
+      color: #4CAF50;
+    }
+    .links-section ul {
+      padding-left: 20px;
+    }
+    .links-section a {
+      color: #1b76d1fa;
+      text-decoration: none;
+    }
+    .links-section a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://uploads.onecompiler.io/437kjcvfd/43qewytga/jplogo.jpg" alt="Organic Kastakar Logo"/>
+    <h1>Organic Kastakar</h1>
+  </header>
+
+  <!-- Search and Filter Controls -->
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="food">Food</option>
+      <option value="skincare">Skincare</option>
+      <option value="gardening">Gardening</option>
+      <option value="others">Others</option>
+    </select>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="container" id="productContainer">
+    <div class="product" data-name="Organic Ghee" data-category="food">
+      <h3>Organic Ghee</h3>
+      <img src="https://shop.akshayakalpa.org/cdn/shop/files/Desi_Cow_Ghee_300_ml.png?v=1744634743" height="150px" width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=organic+ghee" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product" data-name="Multani Mitti" data-category="skincare">
+      <h3>Multani Mitti</h3>
+      <img src="https://5.imimg.com/data5/SELLER/Default/2020/11/LD/CP/OQ/93639076/multani-mitti-powder.jpg" height="150px" width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Multani+Mitti" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product" data-name="Microgreen Kit" data-category="gardening">
+      <h3>Microgreen Kit</h3>
+      <img src="https://images.urbndata.com/is/image/Anthropologie/88396171_000_b?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=640" height="150px" width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=microgreen+kit" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product" data-name="Gauri Cow Dung Cake" data-category="gardening">
+      <h3>Gauri Cow Dung Cake</h3>
+      <img src="https://m.media-amazon.com/images/I/91gfJuj2O7L.jpg"height=125px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Gauri+Cow+Dung+Cake&crid=3AGZVUPFYF0ER&sprefix=gauri+cow+dung+cake%2Caps%2C428&ref=nb_sb_noss" target="_blank">Order now</a></button>
+    </div>
+    
+     <div class="product" data-name="Moringa Powder" data-category="food">
+       <h3>Moringa Powder</h3>
+       <img src="https://myhealth-redcliffelabs.redcliffelabs.com/media/blogcard-images/3217/3e0825eb-ef2f-4cf1-b76b-d78c8366fab6.jpg"height=150px width="200px"/>
+       <button class="btn"><a href="https://www.amazon.in/s?k=moringa+powder+organic&crid=1LEC477NFX79E&sprefix=moringa+powder+organic+%2Caps%2C299&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product" data-name="Pure Honey" data-category="food">
+      <h3>Pure Honey</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4JVU9XxtSv5B96Idwdg-WQyuKU3J2GLsYQ&s" height="150px" width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Pure+Honey" target="_blank">Order now</a></button>
+    </div>
+
+   <div class="product" data-name="Coco Peat" data-category="gardening">
+     <h3>Coco Peat</h3>
+     <img  src="https://thumbs.dreamstime.com/b/bag-coco-peat-isolated-white-background-bag-eco-friendly-coco-peat-gardening-isolated-clean-white-background-377347684.jpg"height=150px width="200px"/>
+     <button class="btn"><a href="https://www.amazon.in/s?k=Coco+Peat&crid=3ABTVRQHUMDMT&sprefix=coco+peat%2Caps%2C385&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+  </div>
+  
+    <div class="product"data-name="Potting Mixture" data-category="gardening">
+      <h3>Potting Mixture</h3>
+      <img src="https://media.istockphoto.com/id/517893398/photo/small-clay-pot-spilling-potting-mix-on-white-background.jpg?s=170667a&w=0&k=20&c=84ml6iYexKf12Nc_t-xRD7eFU_aJBHKtW9njoMVDflg="height=150px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Potting+Mixture&crid=31WJK0Y08H9TH&sprefix=potting+mixture%2Caps%2C302&ref=nb_sb_noss_1" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product"data-name="Neem Cake" data-category="gardening">
+      <h3>Neem Cake</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmd1UWooTz-6eWtlKZpThPgUxOiUk4dIJZNg&s"height=150px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Neem+Cake&crid=1F83O8K3TGS1K&sprefix=neem+cake%2Caps%2C342&ref=nb_sb_noss_1" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product"data-name="Pickle" data-category="Food">
+      <h3>Pickle</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJz5u9M4NiC9hBdf2oGmUmItWJxmyCUi-og&s"height=150px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Pickle&crid=V30GC39GQ5LT&sprefix=pickle%2Caps%2C426&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product"data-name="Chandan Powder" data-category="skincare">
+      <h3>Chandan Powder</h3>
+      <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/444829776/LB/SE/XI/216746806/white-chandan-powder-500x500.jpg"height=150px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Chandan+Powder&crid=38SPYZIX66RHV&sprefix=chandan+powder%2Caps%2C393&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product"data-name="Handmade Soap" data-category="skincare">
+      <h3>Handmade Soap</h3>
+      <img src="https://img.freepik.com/premium-photo/pieces-natural-handmade-soap-white-background_185193-27485.jpg"height=150px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Handmade+Soap&crid=1F4WDWB88B4ZN&sprefix=handmade+soap%2Caps%2C346&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+    </div>
+    
+    <div class="product"data-name="Wheat Floar" data-category="food">
+       <h3>Wheat Flour</h3><img src="https://t4.ftcdn.net/jpg/03/03/51/31/360_F_303513176_eV2YG7BvuZNeyPAUDBc1F2xOAS9leD19.jpg"height=150px width="200px"/>
+       <button class="btn"><a href="https://www.amazon.in/s?k=Wheat+Flour&crid=35FDVYMOAFA7Y&sprefix=wheat+flour%2Caps%2C698&ref=nb_sb_noss_1" target="_blank">Order now</a></button>
+    </div>
+        <div class="product" data-name="Turmeric Powder" data-category="food">
+      <h3>Turmeric Powder</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgjvQYlb3rJFHDjB-fWxV-KfjKNOuVTWD09A&s"height=150px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Turmeric+Powder&crid=2XE5OFWB6SMON&sprefix=turmeric+powder%2Caps%2C372&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+    </div>
+    
+  <div class="product"data-name="Chilli Powder" data-category="food">
+    <h3>Chilli Powder</h3>
+    <img src="https://aurganicum.com/cdn/shop/articles/cayenne-dried-pepper-small-ceramic-bowl_1_1024x1024.jpg?v=1687178591"height=150px width="200px"/>
+    <button class="btn"><a href="https://www.amazon.in/s?k=Chilli+Powder&crid=2Y88KD1YX16X4&sprefix=chilli+powder%2Caps%2C464&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+  </div>
+  
+ <div class="product" data-name="Jaggery Ginger Cubes" data-category="food">
+      <h3>Jaggery Ginger Cubes</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBcBeUiBRvZ7aUdnPfZRlOqAiB03MUg036A&s"height=125px width="200px"/>
+      <button class="btn"><a href="https://www.amazon.in/s?k=Jaggery+Ginger+Cubes&crid=2PQZUBO7L1A8A&sprefix=jaggery+ginger+cubes%2Caps%2C491&ref=nb_sb_noss_1" target="_blank">Order now</a></button>
+  </div>
+  
+  <div class="product" data-name="Pure Jaggery" data-category="food">
+    <h3>Pure Jaggery</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiw8WR__NCewrTbKqred4uU7arg8niIl77hg&s"height=150px width="200px"/>
+    <button class="btn"><a href="https://www.amazon.in/s?k=Pure+Jaggery&ref=nb_sb_noss" target="_blank">Order Now</a></button>
+  </div>
+  
+  <div class="product" data-name="Candle (Organic Fragrance)" data-category="others">
+    <h3>Candle (Organic Fragrance)</h3><img src="https://d1h5frde2m24sj.cloudfront.net/wp-content/uploads/2023/10/81bhoVWZd3L._AC_UF350350_QL80_.jpg"height=125px width="200px"/>
+    <button class="btn"><a href="https://www.amazon.in/s?k=Candle+%28Organic+Fragrance%29&crid=1JJ56YARQVBHX&sprefix=candle+organic+fragrance+%2Caps%2C428&ref=nb_sb_noss_2" target="_blank">Order now</a></button>
+  </div>
+  </div>
+    <!-- Add more products with data-name and data-category attributes -->
+  </div>
+
+  <!-- Links section (unchanged) -->
+  <div class="links-section">
+    <h2>Buy from Online Stores</h2>
+    <ul>
+      <li><a href="https://www.amazon.in/s?k=organic+desi+cow+ghee&crid=3N7QXOOHB19TX&sprefix=organic+ghee+a2+desi+cow+ghee%2Caps%2C422&ref=nb_sb_noss_1" target="_blank">Organic Ghee</a></li>
+      <li><a href="https://www.amazon.in/s?k=Multani+Mitti&crid=3DKSL1UHFXESZ&sprefix=multani+mitti%2Caps%2C1331&ref=nb_sb_noss_2" target="_blank">Multani Mitti</a></li>
+      <li><a href="https://www.amazon.in/s?k=microgreen+kit&crid=1A8ZH0MR2O4F9&sprefix=microgreen+kit%2Caps%2C345&ref=nb_sb_ss_mvt-t11-ranker_1_14" target="_blank">Microgreen Kit</a></li>
+      <li><a href="https://www.amazon.in/s?k=Gauri+Cow+Dung+Cake&crid=3AGZVUPFYF0ER&sprefix=gauri+cow+dung+cake%2Caps%2C428&ref=nb_sb_noss" target="_blank">Gauri Cow Dung Cake</a></li>
+      <li><a href="https://www.amazon.in/s?k=moringa+powder+organic&crid=1LEC477NFX79E&sprefix=moringa+powder+organic+%2Caps%2C299&ref=nb_sb_noss_2" target="_blank">Moringa Powder</a></li>
+      <li><a href="https://www.amazon.in/s?k=Pure+Honey&crid=17TREDQH9JAYT&sprefix=pure+honey%2Caps%2C448&ref=nb_sb_noss_2" target="_blank">Pure Honey</a></li>
+      <li><a href="https://www.amazon.in/s?k=vermi+compost&crid=91EGY968FGQ7&sprefix=vermi+%2Caps%2C322&ref=nb_sb_ss_mvt-t11-ranker_ci_hl-bn-left_1_6" target="_blank">Vermi Compost</a></li>
+      <li><a href="https://www.amazon.in/s?k=Coco+Peat&crid=3ABTVRQHUMDMT&sprefix=coco+peat%2Caps%2C385&ref=nb_sb_noss_2" target="_blank">Coco Peat</a></li>
+      <li><a href="https://www.amazon.in/s?k=Potting+Mixture&crid=31WJK0Y08H9TH&sprefix=potting+mixture%2Caps%2C302&ref=nb_sb_noss_1" target="_blank">Potting Mixture</a></li>
+      <li><a href="https://www.amazon.in/s?k=Neem+Cake&crid=1F83O8K3TGS1K&sprefix=neem+cake%2Caps%2C342&ref=nb_sb_noss_1" target="_blank">Neem Cake</a></li>
+      <li><a href="https://www.amazon.in/s?k=Pickle&crid=V30GC39GQ5LT&sprefix=pickle%2Caps%2C426&ref=nb_sb_noss_2" target="_blank">Pickle</a></li>
+      <li><a href="https://www.amazon.in/s?k=Chandan+Powder&crid=38SPYZIX66RHV&sprefix=chandan+powder%2Caps%2C393&ref=nb_sb_noss_2" target="_blank">Chandan Powder</a></li>
+      <li><a href="https://www.amazon.in/s?k=Handmade+Soap&crid=1F4WDWB88B4ZN&sprefix=handmade+soap%2Caps%2C346&ref=nb_sb_noss_2" target="_blank">Handmade Soap</a></li>
+      <li><a href="https://www.amazon.in/s?k=Wheat+Flour&crid=35FDVYMOAFA7Y&sprefix=wheat+flour%2Caps%2C698&ref=nb_sb_noss_1" target="_blank">Wheat Flour</a></li>
+      <li><a href="https://www.amazon.in/s?k=Turmeric+Powder&crid=2XE5OFWB6SMON&sprefix=turmeric+powder%2Caps%2C372&ref=nb_sb_noss_2" target="_blank">Turmeric Powder</a></li>
+      <li><a href="https://www.amazon.in/s?k=Chilli+Powder&crid=2Y88KD1YX16X4&sprefix=chilli+powder%2Caps%2C464&ref=nb_sb_noss_2" target="_blank">Chilli Powder</a></li>
+      <li><a href="https://www.amazon.in/s?k=Jaggery+Ginger+Cubes&crid=2PQZUBO7L1A8A&sprefix=jaggery+ginger+cubes%2Caps%2C491&ref=nb_sb_noss_1" target="_blank">Jaggery Ginger Cubes</a></li>
+      <li><a href="https://www.amazon.in/s?k=Pure+Jaggery&ref=nb_sb_noss" target="_blank">Pure Jaggery</a></li>
+      <li><a href="https://www.amazon.in/s?k=Candle+%28Organic+Fragrance%29&crid=1JJ56YARQVBHX&sprefix=candle+organic+fragrance+%2Caps%2C428&ref=nb_sb_noss_2" target="_blank">Candle (Organic Fragrance)</a></li>
+    </ul>
+  </div>
+
+  <!-- JavaScript for filtering -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const products = document.querySelectorAll(".product");
+
+    function filterProducts() {
+      const searchValue = searchInput.value.toLowerCase();
+      const categoryValue = categoryFilter.value;
+
+      products.forEach(product => {
+        const name = product.getAttribute("data-name").toLowerCase();
+        const category = product.getAttribute("data-category");
+
+        const matchSearch = name.includes(searchValue);
+        const matchCategory = categoryValue === "all" || category === categoryValue;
+
+        if (matchSearch && matchCategory) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+
+    searchInput.addEventListener("input", filterProducts);
+    categoryFilter.addEventListener("change", filterProducts);
+  </script>
+</body>
+</html>
